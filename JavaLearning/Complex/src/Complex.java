@@ -1,3 +1,4 @@
+import java.nio.charset.IllegalCharsetNameException;
 
 public final class Complex extends Number implements Comparable<Complex>{
     // Construct
@@ -6,6 +7,11 @@ public final class Complex extends Number implements Comparable<Complex>{
     public Complex(double real, double imag){
         this.real = real;
         this.imag = imag;
+    }
+    public Complex(String string){
+        Complex new_complex = valueOf(string);
+        this.real = new_complex.real;
+        this.imag = new_complex.imag;
     }
 
     // override
@@ -30,9 +36,9 @@ public final class Complex extends Number implements Comparable<Complex>{
         // Verify input
         if (str == null) { throw new NullPointerException("Input string is null"); }
         str = str.trim(); // Remove leading and trailing white spaces
-        if (str.isEmpty()) { throw new IllegalArgumentException("Input string is empty"); }
+        if (str.isEmpty()) { throw new IllegalComplexNumberException("Empty"); }
         if (!str.matches("-?\\d+(\\.\\d+)?([+-]\\d+(\\.\\d+)?i)?")) {
-            throw new IllegalArgumentException("Invalid input string: " + str); }
+            throw new IllegalComplexNumberException(str); }
         // Remove all white spaces and split string by "+" or "-"
         String[] parts = str.replaceAll("\\s", "").split("(?=[+-])");
         double real = 0;
@@ -189,3 +195,6 @@ public final class Complex extends Number implements Comparable<Complex>{
         return Double.compare(this.getModulus(), o.getModulus());
     }
 }
+
+
+
