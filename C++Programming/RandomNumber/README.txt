@@ -1,0 +1,1 @@
+使用cmd运行不要用Powershell会出错
