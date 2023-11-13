@@ -1,0 +1,15 @@
+﻿  Compute.cpp
+  Helper.cpp
+D:\Project\Calculator\Helper.cpp(5,19): warning C4244: “初始化”: 从“_Rep”转换到“unsigned int”，可能丢失数据
+          with
+          [
+              _Rep=std::chrono::system_clock::rep
+          ]
+  Search.cpp
+  main.cpp
+  正在生成代码
+  9 of 89 functions (10.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  已完成代码的生成
+  Calculator.vcxproj -> D:\Project\Calculator\x64\Release\Calculator.exe
