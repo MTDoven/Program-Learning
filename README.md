@@ -1,4 +1,4 @@
-# ProgramLearning
+# Program-Learning
 
 This contains some coding tasks and reports that a student from Xidian University needs to complete from freshman to sophomore year. Feel free to use them if needed.  
 1. The C language section includes some content from the freshman C language programming course, as well as four separate files with some commonly used functions.
